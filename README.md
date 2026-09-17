@@ -33,12 +33,14 @@ cd chrono-botanist-cast`
  * Start the Development Server:
    `npm run dev`
 
-   The application will be available at http://localhost:5173.
-🛠️ Building for Production
+The application will be available at https://chrono-botanist-cast.apper.so
+
+# 🛠️ Building for Production
 To create an optimized production build, run:
 npm run build
 
 This will output the minified static files into the dist/ directory, ready to be deployed to Vercel, Netlify, or your preferred hosting provider.
+
 # 🤝 Contributing
 When contributing to this project, please ensure any new UI elements utilize the existing shadcn/ui architecture in src/components/ui/ to maintain aesthetic consistency. For new state requirements, add the relevant logic to src/store/ rather than relying heavily on prop-drilling.
 
