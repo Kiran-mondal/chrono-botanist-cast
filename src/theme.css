@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;800&family=DM+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Fraunces:wght@700;800&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
 
 :root {
   --font-sans: 'DM Sans', sans-serif;
   --font-heading: 'Fraunces', serif;
+  --font-note: 'Caveat', cursive;
+  --font-mono: 'IBM Plex Mono', monospace;
   --radius: 1.15rem;
   --spacing-sidebar: 16rem;
   --spacing-header: 3.75rem;
@@ -61,6 +63,7 @@
   --sidebar-accent-foreground: #f5faef;
   --sidebar-border: #597153;
   --sidebar-ring: #c9a16d;
+  
   --shadow-xs: 0 1px 2px rgba(43,55,40,.05);
   --shadow-sm: 0 5px 14px rgba(43,55,40,.08);
   --shadow-md: 0 12px 30px rgba(43,55,40,.12);
@@ -114,6 +117,7 @@
   --sidebar-accent-foreground: #e9f2e5;
   --sidebar-border: #405443;
   --sidebar-ring: #d0a36b;
+  
   --shadow-xs: 0 1px 2px rgba(0,0,0,.24);
   --shadow-sm: 0 5px 14px rgba(0,0,0,.28);
   --shadow-md: 0 12px 30px rgba(0,0,0,.34);
