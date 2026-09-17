@@ -16,6 +16,12 @@ export function useIsMobile() {
     setIsMobile(mql.matches);
     const onChange = () => setIsMobile(mql.matches);
     mql.addEventListener('change', onChange);
+
+    if (typeof window !== 'undefined' && 'ontouchstart' in window) {
+      const html = document.documentElement;
+      html.style.touchAction = 'manipulation';
+    }
+
     return () => mql.removeEventListener('change', onChange);
   }, []);
 
