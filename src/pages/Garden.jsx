@@ -49,7 +49,7 @@ function RadialSeedPod({ open, selected, discovered, onToggle, onSelect }) {
   if (!open) return null;
   const petals = discovered.map((seed, index) => {
     const angle = (-90 + (360 / discovered.length) * index) * (Math.PI / 180);
-    return { seed, x: 50 + Math.cos(angle) * 34, y: 50 + Math.sin(angle) * 34 };
+    return { seed, x: 50 + Math.cos(angle) * 35, y: 50 + Math.sin(angle) * 35 };
   });
   return (
     <div className="absolute inset-0 z-20 grid place-items-center rounded-[2rem] bg-background/75 p-4 backdrop-blur-sm">
@@ -58,8 +58,8 @@ function RadialSeedPod({ open, selected, discovered, onToggle, onSelect }) {
           <div><ApperIcon name="Flower2" size={26} className="mx-auto text-primary" /><p className="mt-1 font-mono text-[9px] uppercase tracking-[0.18em] text-muted-foreground">Seed pod</p><button type="button" onClick={onToggle} className="mt-2 rounded-lg px-2 py-1 text-xs font-semibold transition hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring active:scale-[0.98]">Close</button></div>
         </div>
         {petals.map(({ seed, x, y }) => (
-          <button key={seed.id} type="button" onClick={() => onSelect(seed.id)} aria-label={`Select ${seed.name}`} className={`absolute grid h-20 w-20 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-[45%_55%_55%_45%] border bg-secondary text-center shadow-sm transition hover:scale-105 hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring active:scale-95 ${selected === seed.id ? 'ring-2 ring-primary' : ''}`} style={{ left: `${x}%`, top: `${y}%`, rotate: `${(x - 50) / 2}deg` }}>
-            <span className="text-2xl">{seed.glyph}</span><span className="mt-0.5 max-w-[4.5rem] font-note text-xs leading-tight">{seed.name}</span>
+          <button key={seed.id} type="button" onClick={() => onSelect(seed.id)} aria-label={`Select ${seed.name}`} className={`absolute grid h-20 w-20 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-[45%_55%_55%_45%] border bg-secondary text-center shadow-sm transition hover:scale-105 hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring active:scale-95 ${selected === seed.id ? 'ring-2 ring-primary' : ''}`} style={{ left: `${x}%`, top: `${y}%`, rotate: `${(x - 50) / 2}deg`, touchAction: 'manipulation' }}>
+            <span className="pointer-events-none text-2xl">{seed.glyph}</span><span className="pointer-events-none mt-0.5 max-w-[4.5rem] font-note text-xs leading-tight">{seed.name}</span>
           </button>
         ))}
       </div>
